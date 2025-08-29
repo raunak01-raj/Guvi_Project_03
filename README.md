@@ -2,10 +2,10 @@
 
 Submitted by: Raunak Raj
 
-Date: 18 Aug 2025
+Date: 05 August 2025
 
 Course: Data Science 
 
-Programming Language: Python
+Programming Language: Python, HTML, CSS
 
 Visit my Site : https://raunak01-raj.github.io/Guvi_Project_03/
