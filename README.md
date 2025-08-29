@@ -1,4 +1,4 @@
-**Project Title: Iris Flower Classification**
+**Project Title: Weather-Responsive Clothing Advisor**
 
 Submitted by: Raunak Raj
 
