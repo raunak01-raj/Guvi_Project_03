@@ -1,0 +1,13 @@
+temperature_celsius,temperature_fahrenheit,base_layer,mid_layer,outer_layer,bottom_layer,accessories,activity_level_modifier
+-40,-40,Thermal underwear (polypropylene/merino wool),Insulated jacket + fleece,Extreme cold parka (-60°F rated),Thermal underwear + insulated pants,"Balaclava, insulated gloves, winter boots, thick socks",Add extra insulation for low activity
+-20,-4,Thermal underwear (polypropylene/merino wool),Insulated jacket + fleece,Heavy winter coat/parka,Thermal underwear + insulated pants,"Winter hat, insulated gloves, winter boots, warm socks",Add extra insulation for low activity
+-10,14,Thermal underwear (polypropylene/merino wool),Down/synthetic insulated jacket,Winter jacket,Thermal leggings + warm pants,"Beanie, warm gloves, winter boots, wool socks",Reduce layers for high activity
+0,32,Long-sleeve base layer,Fleece jacket/wool sweater,Winter coat/jacket,Thermal leggings + jeans/pants,"Hat, gloves, warm boots, thick socks",Reduce layers for high activity
+5,41,Long-sleeve shirt,Light sweater/fleece,Medium jacket,Long pants/jeans,"Light hat, light gloves, boots, warm socks",Adjust based on activity
+10,50,Long-sleeve shirt,Light jacket/cardigan,Light jacket/windbreaker,Long pants/jeans,"Light hat (optional), light gloves, closed shoes",Adjust based on activity
+15,59,Short/long-sleeve shirt,Light sweater (optional),Light jacket (optional),Long pants/light pants,"Light hat (optional), closed shoes",Adjust based on activity
+20,68,Short-sleeve shirt,Light cardigan (optional),Light cardigan/zip-up,Long pants/capris,Closed shoes/sneakers,Standard recommendations
+25,77,Short-sleeve shirt/tank,None needed,None needed,Pants/shorts,"Sunglasses (optional), comfortable shoes",Standard recommendations
+30,86,Tank top/breathable shirt,None needed,Sun protection shirt (optional),Shorts/light pants,"Sunglasses, hat, breathable shoes",Increase ventilation for high activity
+35,95,Lightweight tank,None needed,Sun protection (optional),Shorts,"Sunglasses, sun hat, breathable shoes",Increase ventilation for high activity
+40,104,Ultra-light breathable shirt,None needed,Sun protection recommended,Lightweight shorts,"Sunglasses, wide-brim hat, breathable/ventilated shoes",Maximum ventilation needed

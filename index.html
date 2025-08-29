@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Responsive Clothing Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Weather-Responsive Clothing Advisor</h1>
+            <p class="app-description">Get personalized clothing recommendations based on current weather conditions</p>
+        </header>
+
+        <!-- Main Input Section -->
+        <section class="input-section card">
+            <div class="card__body">
+                <div class="location-input-group">
+                    <div class="form-group">
+                        <label for="location" class="form-label">Enter your location</label>
+                        <div class="input-with-button">
+                            <select id="location" class="form-control">
+                                <option value="">Select a city...</option>
+                            </select>
+                            <button id="getRecommendations" class="btn btn--primary">Get Recommendations</button>
+                        </div>
+                    </div>
+                    <div class="settings-row">
+                        <button id="refreshWeather" class="btn btn--outline">🔄 Refresh Weather</button>
+                        <button id="toggleUnits" class="btn btn--outline">°F / °C</button>
+                        <button id="settingsBtn" class="btn btn--outline">⚙️ Settings</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Display -->
+        <section id="weatherDisplay" class="weather-display" style="display: none;">
+            <div class="weather-card card">
+                <div class="card__body">
+                    <div class="weather-info">
+                        <div class="weather-main">
+                            <div class="temperature-display">
+                                <span id="temperature" class="temperature">--°</span>
+                                <span id="feelsLike" class="feels-like">Feels like --°</span>
+                            </div>
+                            <div class="weather-details">
+                                <h3 id="locationName">--</h3>
+                                <p id="weatherCondition" class="weather-condition">--</p>
+                                <div class="additional-info">
+                                    <span id="humidity" class="weather-stat">Humidity: --%</span>
+                                    <span id="windSpeed" class="weather-stat">Wind: -- km/h</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav id="tabNavigation" class="tab-navigation" style="display: none;">
+            <button class="tab-btn active" data-tab="current">Current Recommendations</button>
+            <button class="tab-btn" data-tab="weekly">7-Day Forecast</button>
+        </nav>
+
+        <!-- Current Recommendations Tab -->
+        <section id="currentTab" class="tab-content">
+            <div class="recommendations-container">
+                <h2>Clothing Recommendations</h2>
+                
+                <!-- Chart Display -->
+                <div class="chart-section card">
+                    <div class="card__body">
+                        <h3>Temperature-Based Clothing Requirements</h3>
+                        <div class="chart-container">
+                            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/1f6ac564d98946495569fbb0373a12d4/1fee69f7-85d8-47b1-a84b-03bf191d10c2/1b6ee23e.png" alt="Temperature-Based Clothing Layer Requirements Chart" class="chart-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clothing Layers -->
+                <div class="clothing-layers">
+                    <!-- Base Layer -->
+                    <div class="layer-card card">
+                        <div class="card__header">
+                            <h3>👕 Base Layer</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="baseLayer" class="recommendation-text">Select a location to get recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Mid Layer -->
+                    <div class="layer-card card">
+                        <div class="card__header">
+                            <h3>🧥 Mid Layer</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="midLayer" class="recommendation-text">Select a location to get recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Outer Layer -->
+                    <div class="layer-card card">
+                        <div class="card__header">
+                            <h3>🧥 Outer Layer</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="outerLayer" class="recommendation-text">Select a location to get recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Layer -->
+                    <div class="layer-card card">
+                        <div class="card__header">
+                            <h3>👖 Bottom Layer</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="bottomLayer" class="recommendation-text">Select a location to get recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Accessories -->
+                    <div class="layer-card card">
+                        <div class="card__header">
+                            <h3>🎩 Accessories</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="accessories" class="recommendation-text">Select a location to get recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Weather Modifiers -->
+                    <div class="modifier-card card">
+                        <div class="card__header">
+                            <h3>☀️ Weather-Specific Additions</h3>
+                        </div>
+                        <div class="card__body">
+                            <p id="weatherModifiers" class="recommendation-text">Additional items based on current conditions</p>
+                            <p id="fabricAdvice" class="fabric-advice">Fabric recommendations will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Forecast Tab -->
+        <section id="weeklyTab" class="tab-content" style="display: none;">
+            <div class="weekly-container">
+                <div class="weekly-header">
+                    <h2>7-Day Clothing Forecast</h2>
+                    <button id="exportWeekly" class="btn btn--primary">📄 Export Weekly Plan</button>
+                </div>
+                <div id="weeklyForecast" class="weekly-forecast">
+                    <!-- Weekly forecast items will be generated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Settings</h3>
+                    <button id="closeSettings" class="btn btn--outline">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="activityLevel" class="form-label">Activity Level</label>
+                        <select id="activityLevel" class="form-control">
+                            <option value="sedentary">Sedentary (Office work)</option>
+                            <option value="moderate" selected>Moderate (Walking, light activity)</option>
+                            <option value="active">Active (Sports, heavy activity)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="personalPreference" class="form-label">Personal Temperature Preference</label>
+                        <select id="personalPreference" class="form-control">
+                            <option value="cold">I run cold (prefer warmer clothing)</option>
+                            <option value="normal" selected>Normal temperature sensitivity</option>
+                            <option value="hot">I run hot (prefer cooler clothing)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveSettings" class="btn btn--primary">Save Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Weather-Responsive Clothing Advisor | Stay comfortable in any weather</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

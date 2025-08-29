@@ -1,0 +1,44 @@
+{
+  "sunny": {
+    "modifier": "Add sun protection",
+    "additional_items": [
+      "sunglasses",
+      "sun hat",
+      "UV protection clothing"
+    ],
+    "fabric_preference": "Light colors, UV-resistant fabrics"
+  },
+  "rainy": {
+    "modifier": "Add waterproof layer",
+    "additional_items": [
+      "waterproof jacket",
+      "rain boots",
+      "umbrella"
+    ],
+    "fabric_preference": "Water-resistant, quick-dry materials"
+  },
+  "snowy": {
+    "modifier": "Add insulation and waterproofing",
+    "additional_items": [
+      "waterproof boots",
+      "warm gloves",
+      "winter hat"
+    ],
+    "fabric_preference": "Insulated, waterproof outer layer"
+  },
+  "windy": {
+    "modifier": "Add windproof layer",
+    "additional_items": [
+      "windbreaker",
+      "wind-resistant jacket"
+    ],
+    "fabric_preference": "Wind-resistant fabrics, fitted clothing"
+  },
+  "humid": {
+    "modifier": "Increase breathability",
+    "additional_items": [
+      "moisture-wicking base layers"
+    ],
+    "fabric_preference": "Breathable, moisture-wicking materials"
+  }
+}
